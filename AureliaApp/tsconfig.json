@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "esnext",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "allowJs": true
+  },
+  "include": [
+    "src",
+    "test"
+  ],
+  "filesGlob": [
+    "./typings/browser.d.ts",
+    "./your_custom_typings_folder_path/**/*.d.ts", // if you use both typings files from this repository (`doc/*.d.ts`)
+  ],
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "allowSyntheticDefaultImports": true,
+  "types": [
+    "i18next",
+    "i18next-xhr-backend"
+  ]
+}

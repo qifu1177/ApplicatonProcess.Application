@@ -1,0 +1,212 @@
+﻿[
+  {
+    "key": "notNull",
+    "LocalizedValue": {
+      "en": "{0} is required!",
+      "de": "{0} ist erfordlich!"
+    }
+  },
+  {
+    "key": "minLength",
+    "LocalizedValue": {
+      "en": "{0} must be at least 3 characters",
+      "de": "{0} muss mindestens 3 Zeichen lang sein"
+    }
+  },
+  {
+    "key": "greater18",
+    "LocalizedValue": {
+      "en": "{0} must be over 18.",
+      "de": "{0} muss über 18 sein."
+    }
+  },
+  {
+    "key": "email_form",
+    "LocalizedValue": {
+      "en": "Email must be like *@*.domain",
+      "de": "Email muss wie *@*.domain sein."
+    }
+  },
+  {
+    "key": "address_form",
+    "LocalizedValue": {
+      "en": "Address must be with postal code, street, and house number.",
+      "de": "Addresse muss Postleitzahl, Straße und Hausnummer angegeben einschließen."
+    }
+  },
+  {
+    "key": "notExist",
+    "LocalizedValue": {
+      "en": "Asset is not in list from https://api.coincap.io/v2/assets.",
+      "de": "Asset ist nicht in der Liste von https://api.coincap.io/v2/assets."
+    }
+  },
+  {
+    "key": "firstname",
+    "LocalizedValue": {
+      "en": "First name",
+      "de": "Vorname"
+    }
+  },
+  {
+    "key": "lastname",
+    "LocalizedValue": {
+      "en": "Last name",
+      "de": "Nachname"
+    }
+  },
+  {
+    "key": "age",
+    "LocalizedValue": {
+      "en": "Age",
+      "de": "Alter"
+    }
+  },
+  {
+    "key": "email",
+    "LocalizedValue": {
+      "en": "Email",
+      "de": "Email"
+    }
+  },
+  {
+    "key": "name",
+    "LocalizedValue": {
+      "en": "Asset name",
+      "de": "Assetname"
+    }
+  },
+  {
+    "key": "marketcapusd",
+    "LocalizedValue": {
+      "en": "Market capitual(usd)",
+      "de": "Marktkapital(usd)"
+    }
+  },
+  {
+    "key": "maxsupply",
+    "LocalizedValue": {
+      "en": "Max supply",
+      "de": "Max Supply"
+    }
+  },
+  {
+    "key": "priceusd",
+    "LocalizedValue": {
+      "en": "Price(usd)",
+      "de": "Preis(usd)"
+    }
+  },
+  {
+    "key": "rank",
+    "LocalizedValue": {
+      "en": "Rank",
+      "de": "Rangstufe"
+    }
+  },
+  {
+    "key": "supply",
+    "LocalizedValue": {
+      "en": "Supply",
+      "de": "Supply"
+    }
+  },
+  {
+    "key": "volumeusd24hr",
+    "LocalizedValue": {
+      "en": "Volume (usd/24h)",
+      "de": "Volumen (usd/24 Stunden)"
+    }
+  },
+  {
+    "key": "loadAssetsFromUrlError",
+    "LocalizedValue": {
+      "en": "Assets cannot be loaded from https://api.coincap.io/v2/assets",
+      "de": "Assets können nicht aus https://api.coincap.io/v2/assets geladen"
+    }
+  },
+  {
+    "key": "loadUsersError",
+    "LocalizedValue": {
+      "en": "Users cannot be loaded from database.",
+      "de": "Benutzer können nicht aus Datenbank geladen werden."
+    }
+  },
+  {
+    "key": "loadUserError",
+    "LocalizedValue": {
+      "en": "User cannot be loaded from database.",
+      "de": "Benutzer kann nicht aus Datenbank geladen werden."
+    }
+  },
+  {
+    "key": "saveUserError",
+    "LocalizedValue": {
+      "en": "User cannot be saved in database.",
+      "de": "Benutzer kann nicht in die Datenbank gespeichert werden."
+    }
+  },
+  {
+    "key": "emailNotFound",
+    "LocalizedValue": {
+      "en": "Email does not exist",
+      "de": "Email ist nicht existiert."
+    }
+  },
+  {
+    "key": "updateUserError",
+    "LocalizedValue": {
+      "en": "User cannot be updated in database.",
+      "de": "Benutzer kann nicht in die Datenbank aktualiesiert werden."
+    }
+  },
+  {
+    "key": "deleteUserError",
+    "LocalizedValue": {
+      "en": "User cannot be deleted from database.",
+      "de": "Benutzer kann nicht aus Datenbank gelösccht werden."
+    }
+  },
+  {
+    "key": "loadAssetsError",
+    "LocalizedValue": {
+      "en": "Assets cannot be loaded from database.",
+      "de": "Assets können nicht aus Datenbank geladen werden."
+    }
+  },
+  {
+    "key": "loadAssetError",
+    "LocalizedValue": {
+      "en": "Asset cannot be loaded from database.",
+      "de": "Asset kann nicht aus Datenbank geladen werden."
+    }
+  },
+  {
+    "key": "saveAssetError",
+    "LocalizedValue": {
+      "en": "Asset cannot be saved in database.",
+      "de": "Asset kann nicht in die Datenbank gespeichert werden."
+    }
+  },
+  {
+    "key": "updateAssetError",
+    "LocalizedValue": {
+      "en": "Asset cannot be updated in database.",
+      "de": "Asset kann nicht in die Datenbank aktualiesiert werden."
+    }
+  },
+  {
+    "key": "delteAssetError",
+    "LocalizedValue": {
+      "en": "Asset cannot be deleted from database.",
+      "de": "Asset kann nicht aus Datenbank gelösccht werden."
+    }
+  },
+  {
+    "key": "assetNotFound",
+    "LocalizedValue": {
+      "en": "Asset does not exist",
+      "de": "Asset ist nicht existiert."
+    }
+  }
+]

@@ -1,0 +1,41 @@
+<template>
+    <div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" click.delegate='back()' t="app:back">New</button>
+        </div>
+        <form class="row g-3">
+            <div class="col-md-6 form-group">
+                <label for="firstname" class="form-label" t="app:firstname">First name</label>
+                <input type="text" class="form-control" id="firstname" value.bind="data.FirstName & validate" required>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="lastname" class="form-label" t="app:lastname">Last name</label>
+                <input type="text" class="form-control" id="lastname" value.two-way="data.LastName & validate" required>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="email" class="form-label" t="app:email" >Email</label>
+                <input type="text" class="form-control" id="email" disabled.bind="!isNew" value.two-way="data.Email & validate" required>
+
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="age" class="form-label" t="app:age">Age</label>
+                <input type="number" class="form-control" id="age" value.two-way="data.Age & validate" required>
+
+            </div>
+            <div class="mb-3 form-group">
+                <label for="address" class="form-label" t="app:address">Address</label>
+                <input type="text" class="form-control" id="address" value.two-way="data.Address & validate"  required>
+                
+            </div>
+            
+            <div class="col-12">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" disabled.bind="disabledSendButton" click.delegate='saveData()' t="app:send">New</button>
+                    <button type="button" class="btn btn-secondary" disabled.bind="disabledResetButton" click.delegate='reset()' t="app:reset">New</button>
+                </div>
+            </div>
+            
+        </form>
+        
+    </div>
+</template>

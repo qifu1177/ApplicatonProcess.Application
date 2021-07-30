@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+    appservice:
+        build: ./
+        ports:
+            - 5001:80
+    website:
+        build: ./AureliaApp
+        volumes:
+            - ./AureliaApp/dist:/var/www/html
+        ports:
+            - 5000:80
+        depends_on:
+            - appservice

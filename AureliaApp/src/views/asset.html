@@ -1,0 +1,57 @@
+<template>
+    <div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" click.delegate='back()' t="app:back">New</button>
+        </div>
+       
+        <form class="row g-3">
+            <div class="col-md-6 form-group">
+                <label for="name" class="form-label" t="app:name">Name</label>
+                
+                <select class="form-select" id="name" value.bind="data.Name & validate" required>                    
+                    <option repeat.for="item of state.assetnames" value.one-time="item">${item}</option>                    
+                  </select>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="rank" class="form-label" t="app:rank">Rank</label>
+                <input type="number" class="form-control" id="rank" value.bind="data.Rank & validate" required>
+            </div>
+
+            <div class="col-md-6 form-group">
+                <label for="supply" class="form-label" t="app:supply" >Supply</label>
+                <input type="number" step="0.001" class="form-control" id="supply" value.bind="data.Supply & validate" required>
+
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="maxSupply" class="form-label" t="app:maxsupply" >Max Supply</label>
+                <input type="number" step="0.001" class="form-control" id="maxSupply" value.bind="data.MaxSupply & validate" required>
+
+            </div>
+
+            <div class="col-md-6 form-group">
+                <label for="marketCapUsd" class="form-label" t="app:marketcapusd" >Supply</label>
+                <input type="number" step="0.001" class="form-control" id="marketCapUsd" value.bind="data.MarketCapUsd & validate" required>
+
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="volumeUsd24Hr" class="form-label" t="app:volumeusd24hr" >Supply</label>
+                <input type="number" step="0.001" class="form-control" id="volumeUsd24Hr" value.bind="data.VolumeUsd24Hr & validate" required>
+
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="priceUsd" class="form-label" t="app:priceusd" >PriceUsd</label>
+                <input type="number" step="0.001" class="form-control" id="priceusd" value.bind="data.PriceUsd & validate" required>
+
+            </div>
+            
+            <div class="col-12">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary" disabled.bind="disabledSendButton" click.delegate='saveData()' t="app:send">New</button>
+                    <button type="button" class="btn btn-secondary" disabled.bind="disabledResetButton" click.delegate='reset()' t="app:reset">New</button>
+                </div>
+            </div>
+            
+        </form>
+        
+    </div>
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" click.delegate='createData()' t="app:new">New</button>
+            <button type="button" class="btn btn-secondary" click.delegate='loadDatas()' t="app:reload">New</button>
+            <button type="button" class="btn btn-secondary" click.delegate='back()' t="app:back">New</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>                    
+                    <th scope="col"></th>
+                    <th scope="col" t="app:rank">email</th>
+                    <th scope="col" t="app:name">email</th>
+                    <th scope="col" t="app:supply">email</th>
+                    <th scope="col" t="app:maxsupply">email</th>
+                    <th scope="col" t="app:marketcapusd">email</th>
+                    <th scope="col" t="app:volumeusd24hr">email</th>
+                    <th scope="col" t="app:priceusd">email</th>
+                </tr>               
+            </thead>
+            <tbody>
+                <tr repeat.for="item of datas">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            
+                            <button type="button" class="btn btn-secondary" click.delegate='editData(item.Id)' t="app:edit">New</button>
+                            <button type="button" class="btn btn-secondary" click.delegate='deleteData(item.Id)' t="app:delete">New</button>
+                        </div>
+                    </td>
+                    <td>${item.Rank}</td>
+                    <td>${item.Name}</td>
+                    <td>${item.Supply}</td>
+                    <td>${item.MaxSupply}</td>
+                    <td>${item.MarketCapUsd}</td>
+                    <td>${item.VolumeUsd24Hr}</td>
+                    <td>${item.PriceUsd}</td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</template>

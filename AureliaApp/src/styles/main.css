@@ -1,0 +1,18 @@
+.validation-message{
+    width:100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
+.has-error .form-control{
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+}
+
+.has-success .form-control{
+    border-color: #198754;
+    padding-right: calc(1.5em + .75rem);
+}
+.nav-active{
+    color: #198754;
+}

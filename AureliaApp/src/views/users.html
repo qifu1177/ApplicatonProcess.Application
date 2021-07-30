@@ -1,0 +1,39 @@
+<template>
+    <div>
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" click.delegate='createData()' t="app:new">New</button>
+            <button type="button" class="btn btn-secondary" click.delegate='loadDatas()' t="app:reload">New</button>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>                    
+                    <th scope="col"></th>
+                    <th scope="col" t="app:email">email</th>
+                    <th scope="col" t="app:firstname">email</th>
+                    <th scope="col" t="app:lastname">email</th>
+                    <th scope="col" t="app:age">email</th>
+                    <th scope="col" t="app:address">email</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr repeat.for="item of datas">
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary" click.delegate='showChilds(item.Email)' t="app:showasset">New</button>
+                            <button type="button" class="btn btn-secondary" click.delegate='editData(item.Email)' t="app:edit">New</button>
+                            <button type="button" class="btn btn-secondary" click.delegate='deleteData(item.Email)' t="app:delete">New</button>
+                        </div>
+                    </td>
+                    <td>${item.Email}</td>
+                    <td>${item.FirstName}</td>
+                    <td>${item.LastName}</td>
+                    <td>${item.Age}</td>
+                    <td>${item.Address}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</template>

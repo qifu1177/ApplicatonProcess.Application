@@ -1,0 +1,12 @@
+<template>
+    <ux-dialog>
+        <ux-dialog-body>
+            <p textcontent.bind="questionRequest.Message"></p>
+        </ux-dialog-body>
+
+        <ux-dialog-footer>
+            <button click.trigger="controller.cancel()" t="app:cancel">Cancel</button>
+            <button click.trigger="controller.ok()" textcontent.bind="questionRequest.OkButtonText">Ok</button>
+        </ux-dialog-footer>
+    </ux-dialog>
+</template>
