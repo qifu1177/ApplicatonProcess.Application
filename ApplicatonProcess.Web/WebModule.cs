@@ -21,7 +21,8 @@ namespace ApplicatonProcess.Web
         protected override void Load(ContainerBuilder builder)
         {           
             IStringLocalizerFactory stringLocalizerFactory = new JsonStringLocalizerFactory();
-            var jsonStringLocalizer = stringLocalizerFactory.Create(Assembly.GetExecutingAssembly(), @"Hahn.ApplicatonProcess.July2021.Web.Resources.translation.json");
+            string nameSpace=this.GetType().Namespace;
+            var jsonStringLocalizer = stringLocalizerFactory.Create(Assembly.GetExecutingAssembly(), $"{nameSpace}.Resources.translation.json");
             builder.RegisterInstance(jsonStringLocalizer).As<IJsonStringLocalizer>().ExternallyOwned();
             AssetNameLogic.Instance.SetStringLocalizer(jsonStringLocalizer).UpdateAssetNames(_assetUrl);
             builder.RegisterInstance(AssetNameLogic.Instance).As<IAssetNameLogic>().ExternallyOwned();
