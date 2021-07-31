@@ -7,14 +7,21 @@ import { initialState } from 'state';
 import { I18N, TCustomAttribute } from 'aurelia-i18n';
 import Backend from 'i18next-xhr-backend';
 import { ValidationMessageProvider } from 'aurelia-validation';
-import { Config } from 'config';
+import {jsonLoader} from 'helps/jsonLoader';
 
-export function configure(aurelia: Aurelia): void {
+
+export async function configure(aurelia: Aurelia) {
+  const Config:any = await jsonLoader('/config.json') ;
+  initialState.config.push(Config);
+  let language_Setting = Config.languageSetting;
+  let setting = localStorage.getItem("languageSetting");
+  if (setting) {
+    language_Setting = JSON.parse(setting);
+    Config.languageSetting.lng=language_Setting.lng;
+  }
   aurelia.use
     .standardConfiguration()
     .feature(PLATFORM.moduleName('resources/index'));
-
-
 
   if (environment.debug) {
     aurelia.use.developmentLogging('debug');
@@ -29,7 +36,7 @@ export function configure(aurelia: Aurelia): void {
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-dialog'));
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-store'), { initialState });
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-i18n'), instance => {
-
+    
     let aliases = ['t', 'i18n'];
     TCustomAttribute.configureAliases(aliases);
     instance.i18next.use(Backend);
@@ -37,11 +44,15 @@ export function configure(aurelia: Aurelia): void {
       backend: {
         loadPath: './locales/{{lng}}/{{ns}}.json'
       },
-      ns: ['app'],
-      defaultNS: 'app',
-      lng: 'en',
-      fallbackLng: 'de',
-      debug: true
+      ns: language_Setting.ns,
+      defaultNS: language_Setting.defaultNS,
+      lng: language_Setting.lng,
+      fallbackLng: language_Setting.fallbackLng,
+      // ns: ["app"],
+      // defaultNS: "app",
+      // lng: "en",
+      // fallbackLng: "de",
+      debug: false
     });
   });
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-validation'));

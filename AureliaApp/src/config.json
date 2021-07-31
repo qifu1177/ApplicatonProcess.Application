@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:5001/",
+  "languageSetting":{
+    "ns": ["app"],
+    "defaultNS": "app",
+    "lng": "en",
+    "fallbackLng": "de"
+  }
+}

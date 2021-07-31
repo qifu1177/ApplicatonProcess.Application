@@ -3,7 +3,6 @@ import { AppRouter } from './route';
 import { Store } from 'aurelia-store';
 import { State } from 'state';
 import { HttpClient } from 'aurelia-fetch-client';
-import { Config } from 'config';
 import { inject } from 'aurelia-framework';
 import { DialogService } from 'aurelia-dialog';
 import { I18N } from 'aurelia-i18n';
@@ -29,6 +28,7 @@ export class App {
     this.store.state.subscribe(
       (state) => {
         that.state = state;
+        that.currentLN=state.config[0].languageSetting.lng;
         that.state.currentLN[0] = that.currentLN;
         that.loadAssetNames();
       }
@@ -44,7 +44,7 @@ export class App {
   loadAssetNames(): void {
     let httpClient: HttpClient = new HttpClient();
 
-    httpClient.fetch(`${Config.BASE_URL}AssetNames/${this.currentLN}`)
+    httpClient.fetch(`${this.state.config[0].baseUrl}AssetNames/${this.currentLN}`)
       .then(async response => {
         let data = await response.json();
         if (Array.isArray(data)) {
@@ -69,6 +69,8 @@ export class App {
     this.i18n.setLocale(language);
     this.currentLN = language;
     this.state.currentLN[0] = this.currentLN;
+    this.state.config[0].languageSetting.lng=language;
+    localStorage.setItem("languageSetting",JSON.stringify( this.state.config[0].languageSetting));
   }
 }
 

@@ -2,7 +2,7 @@ import { inject } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import { HttpClient } from 'aurelia-fetch-client';
 import { DialogService } from 'aurelia-dialog';
-import { Config } from '../config';
+//import { Config } from '../config';
 import { Question } from '../components/question';
 import { QuestionRequste } from '../models/questionrequste';
 import { I18N } from 'aurelia-i18n';
@@ -38,7 +38,7 @@ export abstract class DataGrid<T>
         );
     }
     getUrl(id: string | number = ''): string {
-        let url: string = `${Config.BASE_URL}${this.controlName}`;
+        let url: string = `${this.state.config[0].baseUrl}${this.controlName}`;
         if (this.parentId) {
             url = `${url}/${this.parentId}`;
         }

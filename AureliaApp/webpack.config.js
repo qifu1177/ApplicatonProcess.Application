@@ -267,7 +267,8 @@ module.exports = ({ production } = {}, {extractCss, analyze, tests, hmr, port, h
       patterns: [
         { from: 'static', to: outDir, globOptions: { ignore: ['.*'] },
        },
-       { from: `${srcDir}/locales`, to: 'locales' }
+       { from: `${srcDir}/locales`, to: 'locales' },
+      { from: `${srcDir}/config.json`, to: 'config.json' }
       ]
     })), // ignore dot (hidden) files
     ...when(analyze, new BundleAnalyzerPlugin()),
