@@ -23,6 +23,9 @@ AssetName – must be an existing asset (Show the user in the frontend only asse
 - If the object is invalid ( on post and put ) – return 400 and an information what property does not fullyfy the requirements and which requirement is not fullyfied.
 - Describe the API with swagger therefore use Swashbuckle host the swaggerUI under [localhost]/swagger.
 - Provide example data in the SwaggerUI, so when someone click on try it out there is already useful valid data in the object that can be posted.
+- For all strings, use localization and a Jsonfile as resource file.
+- To save the data use entityframework core 5.0 and entityframework in memory database.
+- Use autofac for dependency injection
 ## Frontend:
 The including Form must be an Aurelia Application which uses the API to Post Data AND Validate all the inputs with the exact same parameters as the API does.
 - use Typescript
@@ -40,10 +43,6 @@ The including Form must be an Aurelia Application which uses the API to Post Dat
 - The send button is only active if all required fields are filled out and are valid.
 - after sending the data, the aurelia router redirects to a view which confirms the sending and shows the user all his created assets.
 - if the sending was not successful an error message is shown in a aurelia-dialog. Describing what was going wrong.
-
-- For all strings, use localization and a Jsonfile as resource file.
-- To save the data use entityframework core 5.0 and entityframework in memory database.
-- Use autofac for dependency injection
 
 ## Run the app with docker
 ### Installation
