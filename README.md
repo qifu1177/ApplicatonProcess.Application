@@ -17,12 +17,12 @@ This Project includes a .net 5 api and a aurelia app.
 ### DELETE 
     – to delete the object with the given id
 ## Rules:
-The WebApi accepts and returns application/json data.
-The object and the properties should be validated by fluentValidation ( nuget ) with the following rules:
+- The WebApi accepts and returns application/json data.
+- The object and the properties should be validated by fluentValidation ( nuget ) with the following rules:
 AssetName – must be an existing asset (Show the user in the frontend only assets which are existing on the api endpoint: https://api.coincap.io/v2/assets but the ui shouldn’t be slow)
-If the object is invalid ( on post and put ) – return 400 and an information what property does not fullyfy the requirements and which requirement is not fullyfied.
-Describe the API with swagger therefore use Swashbuckle host the swaggerUI under [localhost]/swagger.
-Provide example data in the SwaggerUI, so when someone click on try it out there is already useful valid data in the object that can be posted.
+- If the object is invalid ( on post and put ) – return 400 and an information what property does not fullyfy the requirements and which requirement is not fullyfied.
+- Describe the API with swagger therefore use Swashbuckle host the swaggerUI under [localhost]/swagger.
+- Provide example data in the SwaggerUI, so when someone click on try it out there is already useful valid data in the object that can be posted.
 ## Frontend:
 The including Form must be an Aurelia Application which uses the API to Post Data AND Validate all the inputs with the exact same parameters as the API does.
 - use Typescript
@@ -41,17 +41,18 @@ The including Form must be an Aurelia Application which uses the API to Post Dat
 - after sending the data, the aurelia router redirects to a view which confirms the sending and shows the user all his created assets.
 - if the sending was not successful an error message is shown in a aurelia-dialog. Describing what was going wrong.
 
-For all strings, use localization and a Jsonfile as resource file.
-To save the data use entityframework core 5.0 and entityframework in memory database.
-Use autofac for dependency injection
+- For all strings, use localization and a Jsonfile as resource file.
+- To save the data use entityframework core 5.0 and entityframework in memory database.
+- Use autofac for dependency injection
 
-## 1. Installation
+## Run the app with docker
+### Installation
 For the project shoud be installed docker and nodejs
-    . Docker installation, go to https://www.docker.com/get-started
-    . nodejs installation, go to https://nodejs.org/en/download/
+- Docker installation, go to https://www.docker.com/get-started
+- nodejs installation, go to https://nodejs.org/en/download/
 
-## 2. Build for production
-Go to folder "ApplicatonProcess.Application\AureliaApp", then run `npm install`, then run `npm run build`
-## 3. Run the App
-Go to folder "ApplicatonProcess.Application", then run `docker-compose up`, then open `http://localhost:5000` 
+### Build for production
+- Go to folder "ApplicatonProcess.Application\AureliaApp", then run `npm install`, then run `npm run build`
+### Run 
+- Go to folder "ApplicatonProcess.Application", then run `docker-compose up`, then open `http://localhost:5000` 
 
