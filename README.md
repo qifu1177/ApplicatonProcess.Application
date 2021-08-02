@@ -26,6 +26,7 @@ AssetName – must be an existing asset (Show the user in the frontend only asse
 - For all strings, use localization and a Jsonfile as resource file.
 - To save the data use entityframework core 5.0 and entityframework in memory database.
 - Use autofac for dependency injection
+- Write the log to a serilog rolling file sink the name needs to be setable in the applicationsettings.json file. 
 ## Frontend:
 The including Form must be an Aurelia Application which uses the API to Post Data AND Validate all the inputs with the exact same parameters as the API does.
 - use Typescript
