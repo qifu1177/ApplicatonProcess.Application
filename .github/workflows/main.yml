@@ -36,8 +36,8 @@ jobs:
           dotnet restore "ApplicatonProcess.Domain/ApplicatonProcess.Domain.csproj"
           dotnet restore "ApplicatonProcess.Web/ApplicatonProcess.Web.csproj"
       - name: Build
-          dotnet build --no-restore "ApplicatonProcess.Web/ApplicatonProcess.Web.csproj" -c Release -o /app/build
+          dotnet build --no-restore "ApplicatonProcess.Web/ApplicatonProcess.Web.csproj" -c Release -o app/build
       - name: Publish
-          dotnet publish --no-restore "ApplicatonProcess.Web/ApplicatonProcess.Web.csproj" -c Release -o /app/publish
+          dotnet publish --no-restore "ApplicatonProcess.Web/ApplicatonProcess.Web.csproj" -c Release -o app/publish
      
           
